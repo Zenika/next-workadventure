@@ -67,7 +67,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/infos.zenika.com\/hubfs\/Programme%20Next%202022.png"
+                 "value":"https:\/\/f.hubspotusercontent30.net\/hubfs\/19927536\/Programme%20Next%20work%20adventure.pdf"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -383,7 +383,7 @@
                 {
                  "name":"jitsiInterfaceConfig",
                  "type":"string",
-                 "value":"{\"DEFAULT_BACKGROUND\": \"#6b1b1b\"}"
+                 "value":" "
                 }, 
                 {
                  "name":"jitsiRoom",
