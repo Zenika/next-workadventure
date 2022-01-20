@@ -1107,12 +1107,12 @@
         {
          "name":"mapLink",
          "type":"string",
-         "value":"https:\/\/valdotr.github.io\/medium-webinar\/map.json"
+         "value":"https:\/\/zenika.github.io\/next-workadventure\/map.json"
         }, 
         {
          "name":"mapName",
          "type":"string",
-         "value":"Big Workshop"
+         "value":"Next 2022"
         }, 
         {
          "name":"script",
