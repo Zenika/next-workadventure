@@ -6,11 +6,11 @@ import {bootstrapExtra} from "@workadventure/scripting-api-extra";
 bootstrapExtra().catch(e => console.error(e));
 
 let currentPopup: any = undefined;
+
 const today = new Date();
 const time = today.getHours() + ":" + today.getMinutes();
 
 WA.room.onEnterLayer('clockZone').subscribe(() => {
-    console.log('toto')
     currentPopup =  WA.ui.openPopup("clockPopup","It's " + time,[]);
 })
 
@@ -22,3 +22,43 @@ function closePopUp(){
         currentPopup = undefined;
     }
 }
+
+
+let helloWorldPopup: any = undefined;
+
+// Open the popup when we enter a given zone
+WA.room.onEnterLayer("needHelpZone").subscribe(() => {
+    helloWorldPopup = WA.ui.openPopup("needHelpPopup", 'Vous êtes perdu·e, vous avez une question ? Rapprochez-vous des Zenika, ils sont facilement repérable avec leurs sweat rouge!', []);
+});
+
+// Close the popup when we leave the zone.
+WA.room.onLeaveLayer("needHelpZone").subscribe(() => {
+    helloWorldPopup.close();
+})
+
+
+let socialNetworkPopup: any = undefined;
+
+// Open the popup when we enter a given zone
+WA.room.onEnterLayer("followUsZone").subscribe(() => {
+    socialNetworkPopup = WA.ui.openPopup("followUsPopup", 'Envie de nous suivre sur les réseaux ou de communiquer sur votre journée? #zenikaNEXTconf', [
+    {
+        label: "twitter",
+        className: "primary",
+        callback: (popup) => {
+            WA.nav.openTab("https://twitter.com/zenikait"); 
+        }
+    },
+    {
+        label: "linkedin",
+        className: "primary",
+        callback: (popup) => {
+            WA.nav.openTab("https://www.linkedin.com/company/zenika/"); 
+        }
+    }]);
+});
+
+// Close the popup when we leave the zone.
+WA.room.onLeaveLayer("followUsZone").subscribe(() => {
+    socialNetworkPopup.close();
+})
