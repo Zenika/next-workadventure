@@ -28,7 +28,7 @@ let helloWorldPopup: any = undefined;
 
 // Open the popup when we enter a given zone
 WA.room.onEnterLayer("needHelpZone").subscribe(() => {
-    helloWorldPopup = WA.ui.openPopup("needHelpPopup", 'Vous êtes perdu·e, vous avez une question ? Rapprochez-vous des Zenika, ils sont facilement repérable avec leurs sweat rouge!', []);
+    helloWorldPopup = WA.ui.openPopup("needHelpPopup", 'Vous êtes perdu·e, vous avez une question ? Rapprochez-vous des Zenika, ils sont facilement repérables avec leur sweat rouge!', []);
 });
 
 // Close the popup when we leave the zone.
