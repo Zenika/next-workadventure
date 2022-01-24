@@ -36,6 +36,44 @@ WA.room.onLeaveLayer("needHelpZone").subscribe(() => {
     helloWorldPopup.close();
 })
 
+let openFeedbackPopupR: any = undefined;
+
+// Open the popup when we enter a given zone
+WA.room.onEnterLayer("feedbackZoneR").subscribe(() => {
+    openFeedbackPopupR = WA.ui.openPopup("feedbackPopupR", 'Envie de nous donner votre avis sur un talk? Suivez le lien!', [
+    {
+        label: "Je donne mon avis!",
+        className: "primary",
+        callback: (popup) => {
+            WA.nav.openTab("https://openfeedback.io/"); 
+        }
+    }]);
+});
+
+// Close the popup when we leave the zone.
+WA.room.onLeaveLayer("feedbackZoneR").subscribe(() => {
+    openFeedbackPopupR.close();
+})
+
+let openFeedbackPopup: any = undefined;
+
+// Open the popup when we enter a given zone
+WA.room.onEnterLayer("feedbackZoneL").subscribe(() => {
+    openFeedbackPopup = WA.ui.openPopup("feedbackPopupL", 'Envie de nous donner votre avis sur un talk? Suivez le lien!', [
+    {
+        label: "Je donne mon avis!",
+        className: "primary",
+        callback: (popup) => {
+            WA.nav.openTab("https://openfeedback.io/"); 
+        }
+    }]);
+});
+
+// Close the popup when we leave the zone.
+WA.room.onLeaveLayer("feedbackZoneL").subscribe(() => {
+    openFeedbackPopup.close();
+})
+
 
 let socialNetworkPopup: any = undefined;
 
