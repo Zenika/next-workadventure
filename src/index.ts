@@ -40,12 +40,12 @@ let openFeedbackPopupR: any = undefined;
 
 // Open the popup when we enter a given zone
 WA.room.onEnterLayer("feedbackZoneR").subscribe(() => {
-    openFeedbackPopupR = WA.ui.openPopup("feedbackPopupR", 'Envie de nous donner votre avis sur un talk? Suivez le lien!', [
+    openFeedbackPopupR = WA.ui.openPopup("feedbackPopupR", 'Envie de nous donner votre avis sur un talk/débat? Ça se passe sur OpenFeedBack!', [
     {
-        label: "Je donne mon avis!",
+        label: "OpenFeedBack",
         className: "primary",
         callback: (popup) => {
-            WA.nav.openTab("https://openfeedback.io/"); 
+            WA.nav.openTab("https://openfeedback.io/zenika-next-2022"); 
         }
     }]);
 });
@@ -59,12 +59,12 @@ let openFeedbackPopup: any = undefined;
 
 // Open the popup when we enter a given zone
 WA.room.onEnterLayer("feedbackZoneL").subscribe(() => {
-    openFeedbackPopup = WA.ui.openPopup("feedbackPopupL", 'Envie de nous donner votre avis sur un talk? Suivez le lien!', [
+    openFeedbackPopup = WA.ui.openPopup("feedbackPopupL", 'Envie de nous donner votre avis sur un talk/débat? Ça se passe sur OpenFeedBack!', [
     {
-        label: "Je donne mon avis!",
+        label: "OpenFeedBack",
         className: "primary",
         callback: (popup) => {
-            WA.nav.openTab("https://openfeedback.io/"); 
+            WA.nav.openTab("https://openfeedback.io/zenika-next-2022"); 
         }
     }]);
 });
