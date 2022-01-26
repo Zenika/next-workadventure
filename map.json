@@ -104,6 +104,11 @@
                  "name":"openTab",
                  "type":"string",
                  "value":"{{#secretEventEnable}}{{{secretEventUrl}}}{{\/secretEventEnable}}"
+                }, 
+                {
+                 "name":"silent",
+                 "type":"bool",
+                 "value":true
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -435,6 +440,11 @@
                  "name":"openWebsitePolicy",
                  "type":"string",
                  "value":" fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                }, 
+                {
+                 "name":"silent",
+                 "type":"bool",
+                 "value":true
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -453,6 +463,11 @@
                  "name":"openTab",
                  "type":"string",
                  "value":"{{{ streamYardUrl }}}"
+                }, 
+                {
+                 "name":"silent",
+                 "type":"bool",
+                 "value":true
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -1159,7 +1174,7 @@
                         {
                          "name":"default",
                          "type":"string",
-                         "value":"https:\/\/us02web.zoom.us\/j\/82567146933?pwd=Ui8wQitwUHVjaFBGbEl3d3Qvb3dkUT09"
+                         "value":""
                         }, 
                         {
                          "name":"label",
